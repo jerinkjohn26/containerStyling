@@ -70,12 +70,12 @@ class MyApp extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.red.withOpacity(0.8),
                 offset: Offset(-6.0, -6.0),
                 blurRadius: 16.0,
               ),
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.blue.withOpacity(0.1),
                 offset: Offset(6.0, 6.0),
                 blurRadius: 16.0,
               ),

@@ -1,8 +1,14 @@
-import 'package:containerstyling/custom_container.dart';
+import 'dart:math' as math;
+
+import 'package:containerstyling/header.dart';
 import 'package:flutter/material.dart';
 
+import 'header_compact.dart';
+
 void main() {
-  runApp(const CustomContainer());
+  runApp(const MaterialApp(
+    home: Scaffold(body: HeaderCompact()),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,36 +28,26 @@ class MyApp extends StatelessWidget {
             width: 50,
           ),
         ),
-        Positioned(
-          top: 10,
-          right: 200,
-          child: Center(
-            child: Container(
-              transform: Matrix4.skewY(0.0)..setEntry(1, 0, 1),
-              padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.fromLTRB(10, 50, 25, 10),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 39, 233, 191),
-                border: Border.all(width: 1, color: Colors.red),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.cyan,
-                      blurRadius: 20,
-                      spreadRadius: 10,
-                      offset: Offset(10, 10)),
-                ],
+        Container(
+          transform: Matrix4.skewY(0.0)..rotateZ(-math.pi / 12.0),
+          margin: const EdgeInsets.only(top: 100),
+          width: 100,
+          height: 100,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red.withOpacity(0.8),
+                offset: const Offset(-6.0, -6.0),
+                blurRadius: 16.0,
               ),
-              width: 100,
-              height: 100,
-              child: const Directionality(
-                textDirection: TextDirection.ltr,
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Text('hello'),
-                ),
+              BoxShadow(
+                color: Colors.blue.withOpacity(0.1),
+                offset: const Offset(6.0, 6.0),
+                blurRadius: 16.0,
               ),
-            ),
+            ],
+            color: const Color(0xFFEFEEEE),
+            borderRadius: BorderRadius.circular(12.0),
           ),
         ),
       ],

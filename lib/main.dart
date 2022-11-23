@@ -1,10 +1,12 @@
-import 'dart:html';
 import 'dart:math' as math;
 
+import 'package:containerstyling/header.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: Scaffold(body: Header()),
+  ));
 }
 
 class MyApp extends StatelessWidget {

@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:containerstyling/header.dart';
 import 'package:containerstyling/tic_tac.dart';
+import 'package:containerstyling/tic_tac_toe.dart';
 import 'package:flutter/material.dart';
 
 import 'header_compact.dart';
@@ -12,7 +13,7 @@ import 'header_compact.dart';
 //   ));
 // }
 void main() {
-  runApp(TicTac());
+  runApp(MaterialApp(home: Scaffold(body: TicTacToe())));
 }
 
 class MyApp extends StatelessWidget {

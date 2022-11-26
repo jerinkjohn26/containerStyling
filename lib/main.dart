@@ -1,14 +1,18 @@
 import 'dart:math' as math;
 
 import 'package:containerstyling/header.dart';
+import 'package:containerstyling/tic_tac.dart';
 import 'package:flutter/material.dart';
 
 import 'header_compact.dart';
 
+// void main() {
+//   runApp(const MaterialApp(
+//     home: Scaffold(body: HeaderCompact()),
+//   ));
+// }
 void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(body: HeaderCompact()),
-  ));
+  runApp(TicTac());
 }
 
 class MyApp extends StatelessWidget {
